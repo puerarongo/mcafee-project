@@ -1,0 +1,82 @@
+.title {
+  margin-bottom: 8px;
+}
+
+.form {
+  font-size: 14px;
+  font-weight: 400;
+  color: #4a4f5d;
+}
+
+.validation__error,
+.default {
+  margin-bottom: 30px;
+}
+
+.validation__error {
+  font-size: 16px;
+  font-weight: 400;
+  color: #e32224;
+  margin-left: 16px;
+}
+
+.default {
+  display: block;
+  width: 3px;
+  height: 16px;
+}
+
+.container__confirm {
+  display: flex;
+  margin-bottom: 32px;
+}
+
+.text__confirm {
+  margin-right: auto;
+  max-width: 340px;
+  font-size: 12px;
+  line-height: 1.2;
+}
+
+.button__confirm {
+  box-sizing: content-box;
+  width: 156px;
+  margin: 8px 0 8px auto;
+  padding: 8.8px 25px;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  background-color: #ff1c1c;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.button__confirm:hover,
+.button__confirm:active {
+  background-color: #7c1010;
+}
+
+/* todo */
+.line {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  margin-bottom: 28px;
+}
+
+.container__disable {
+  display: flex;
+  opacity: 0.2;
+  margin-bottom: 16px;
+}
+
+/* * Material UI */
+.inpit {
+  border-bottom: none;
+}
+
+.css-1ff8729-MuiInputBase-root-MuiFilledInput-root,
+.css-1ff8729-MuiInputBase-root-MuiFilledInput-root:after,
+.css-1ff8729-MuiInputBase-root-MuiFilledInput-root:before {
+  border-bottom: none;
+}

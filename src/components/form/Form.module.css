@@ -1,3 +1,12 @@
 .container {
-  width: 80%;
+  width: 58%;
+  padding: 16px 75px 32px 90px;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #4a4f5d;
+  margin-bottom: 24px;
 }

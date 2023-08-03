@@ -1,0 +1,145 @@
+.title__container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.title__email {
+  margin-right: 6px;
+}
+
+.email {
+  margin-right: auto;
+}
+
+.edit__button {
+  margin-left: auto;
+  padding: 0;
+  border: 0;
+  text-decoration: underline;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.cards__container {
+  margin-left: auto;
+}
+
+.infonote {
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.2;
+  color: #38393c;
+}
+
+.infonote::before {
+  content: "\1f6c8\0000a0";
+  font-size: 13px;
+}
+
+.line {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  margin-bottom: 16px;
+}
+
+.validation__error,
+.default {
+  margin-bottom: 30px;
+}
+
+.validation__error {
+  font-size: 16px;
+  font-weight: 400;
+  color: #e32224;
+  margin-left: 16px;
+}
+
+.default {
+  display: block;
+  width: 3px;
+  height: 16px;
+}
+
+/* todo Buttons */
+.buttons__container {
+  display: flex;
+  margin-bottom: 16px;
+}
+
+.button__tumbler {
+  width: 215px;
+  height: 35px;
+  background-color: #fff;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.button__tumbler:not(:last-child) {
+  margin-right: 16px;
+}
+
+.button__tumbler:active {
+  border: 2px solid #000;
+}
+
+.button__tumbler:active .button__tumbler::before {
+  content: "";
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 8px solid #000;
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+}
+
+/* todo Field Container */
+.name__container,
+.code__container {
+  display: flex;
+}
+
+.checkbox__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 16px 24px 16px 29px;
+  margin-bottom: 32px;
+  background-color: #f6f7f9;
+}
+
+.checkbox {
+  margin-right: 20px;
+}
+
+.checkbox__text {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+/* todo Button Confirm */
+.container__confirm {
+  display: flex;
+}
+
+.button__confirm {
+  box-sizing: content-box;
+  width: 156px;
+  margin: 8px 0 8px auto;
+  padding: 8.8px 25px;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  background-color: #ff1c1c;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.button__confirm:hover,
+.button__confirm:active {
+  background-color: #7c1010;
+}
