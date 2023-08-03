@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/mcafee-project/static/css/main.79c2a5b6.css",
-    "main.js": "/mcafee-project/static/js/main.a542f8d4.js",
+    "main.css": "/mcafee-project/static/css/main.12afc2e8.css",
+    "main.js": "/mcafee-project/static/js/main.b3d3455a.js",
     "static/js/787.2bd89cc7.chunk.js": "/mcafee-project/static/js/787.2bd89cc7.chunk.js",
     "static/media/logo.svg": "/mcafee-project/static/media/logo.706d53d5b7232773970d87caea663040.svg",
     "index.html": "/mcafee-project/index.html",
-    "main.79c2a5b6.css.map": "/mcafee-project/static/css/main.79c2a5b6.css.map",
-    "main.a542f8d4.js.map": "/mcafee-project/static/js/main.a542f8d4.js.map",
+    "main.12afc2e8.css.map": "/mcafee-project/static/css/main.12afc2e8.css.map",
+    "main.b3d3455a.js.map": "/mcafee-project/static/js/main.b3d3455a.js.map",
     "787.2bd89cc7.chunk.js.map": "/mcafee-project/static/js/787.2bd89cc7.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.79c2a5b6.css",
-    "static/js/main.a542f8d4.js"
+    "static/css/main.12afc2e8.css",
+    "static/js/main.b3d3455a.js"
   ]
 }
