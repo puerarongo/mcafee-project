@@ -8,10 +8,10 @@ const FormPage: React.FC = () => {
   return (
     <>
       <Header />
-      <div className={styles.main__container}>
+      <main className={styles.main__container}>
         <Form />
         <ProductDetail />
-      </div>
+      </main>
     </>
   );
 };

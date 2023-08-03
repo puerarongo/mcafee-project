@@ -1,0 +1,121 @@
+.container {
+  display: block;
+  border-radius: 16px;
+  color: #4a4f5d;
+}
+
+.top__container {
+  display: flex;
+  padding: 24px 24px 16px;
+  border-bottom: 1px solid #cdcdcd;
+}
+
+.name__container {
+  text-align: left;
+  width: 75%;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.quotes__container {
+  text-align: right;
+  width: 25%;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.product__name {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+
+.product__price {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.2;
+  padding-bottom: 8px;
+  margin-bottom: 6px;
+  border-bottom: 1px dashed #cdcdcd;
+}
+
+.product__tax {
+  font-weight: 700;
+  color: #15bc94;
+}
+
+.product__permonth {
+  font-style: italic;
+  color: #15bc94;
+}
+
+/* todo Article Container */
+.article__container {
+  text-align: left;
+  padding: 24px 24px 8px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.article__title {
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+.article__text {
+  margin-bottom: 8px;
+}
+
+/* todo Price Container */
+.price__container {
+  padding: 56px 24px 24px;
+}
+
+.container__into {
+  display: flex;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-bottom: 16px;
+}
+
+.subtitles__container {
+  margin-right: auto;
+  text-align: left;
+}
+
+.sum__container {
+  margin-left: auto;
+  text-align: right;
+}
+
+.sub_total {
+}
+
+.tax {
+  font-weight: 14px;
+}
+
+.line {
+  width: 100%;
+  margin-bottom: 16px;
+  border-top: 2px dashed #cdcdcd;
+}
+
+.total__subtitle,
+.total__price {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.total__subtitle {
+  margin-right: auto;
+}
+
+.total__price {
+  margin-left: auto;
+}
