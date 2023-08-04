@@ -30,12 +30,19 @@ const EmailStage: React.FC<IEmailStage> = ({ setActiveForm, setEmail }) => {
         }) => (
           <form className={styles.email__form} onSubmit={handleSubmit}>
             <TextField
+              className={styles.input}
               sx={
                 errors.email && touched.email
                   ? {
                       ...textFieldCostumization,
                       width: "555px",
                       border: "1px solid #e32224",
+                    }
+                  : touched.email
+                  ? {
+                      ...textFieldCostumization,
+                      width: "555px",
+                      border: "1px solid #007bff",
                     }
                   : {
                       ...textFieldCostumization,
@@ -46,9 +53,10 @@ const EmailStage: React.FC<IEmailStage> = ({ setActiveForm, setEmail }) => {
               label="Email"
               name="email"
               type="email"
-              autoComplete="off"
-              variant="filled"
               value={values.email}
+              variant="filled"
+              autoComplete="off"
+              inputProps={{ maxLength: 49 }}
               onBlur={handleBlur}
               onChange={handleChange}
             />

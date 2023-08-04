@@ -44,11 +44,12 @@
 
 .validation__error,
 .default {
-  margin-bottom: 30px;
+  margin-top: 3px;
+  margin-bottom: 14px;
 }
 
 .validation__error {
-  font-size: 16px;
+  font-size: 12px;
   font-weight: 400;
   color: #e32224;
   margin-left: 16px;
@@ -57,7 +58,7 @@
 .default {
   display: block;
   width: 3px;
-  height: 16px;
+  height: 18px;
 }
 
 /* todo Buttons */
@@ -165,4 +166,8 @@
 
 .field__container {
   width: 50%;
+}
+
+.input {
+  cursor: text;
 }

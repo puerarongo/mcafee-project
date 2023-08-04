@@ -41,6 +41,16 @@ const textFieldCostumization = {
     top: -10,
     left: 5,
   },
+  "& .MuiFormLabel-root.MuiInputLabel-root.Mui-focused": {
+    color: "rgba(0, 0, 0, 0.6)",
+    fontSize: "12px",
+    top: -5,
+  },
+  "& .MuiFormLabel-root.MuiInputLabel-root": {
+    color: "rgba(0, 0, 0, 0.6)",
+    fontSize: "12px",
+    top: -5,
+  },
   "& .MuiInputBase-root:hover": {
     backgroundColor: "none",
     borderBottom: "none",
