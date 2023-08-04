@@ -71,12 +71,3 @@
 }
 
 /* * Material UI */
-.inpit {
-  border-bottom: none;
-}
-
-.css-1ff8729-MuiInputBase-root-MuiFilledInput-root,
-.css-1ff8729-MuiInputBase-root-MuiFilledInput-root:after,
-.css-1ff8729-MuiInputBase-root-MuiFilledInput-root:before {
-  border-bottom: none;
-}

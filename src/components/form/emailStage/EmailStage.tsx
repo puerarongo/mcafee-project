@@ -3,6 +3,7 @@ import { Formik } from "formik";
 import { TextField } from "@mui/material";
 import IEmailStage from "../../../helpers/interface/emailStage.interface";
 import emailValidationSchema from "../../../helpers/emailValidationSchema";
+import textFieldCostumization from "../../../helpers/textFieldCostumization";
 import styles from "./EmailStage.module.css";
 
 const EmailStage: React.FC<IEmailStage> = ({ setActiveForm, setEmail }) => {
@@ -29,13 +30,19 @@ const EmailStage: React.FC<IEmailStage> = ({ setActiveForm, setEmail }) => {
         }) => (
           <form className={styles.email__form} onSubmit={handleSubmit}>
             <TextField
-              className={styles.input}
-              sx={{
-                width: "100%",
-                height: "22px",
-                border: "1px solid #000",
-                padding: "6px 12px 6px 16px",
-              }}
+              sx={
+                errors.email && touched.email
+                  ? {
+                      ...textFieldCostumization,
+                      width: "555px",
+                      border: "1px solid #e32224",
+                    }
+                  : {
+                      ...textFieldCostumization,
+                      width: "555px",
+                      border: "1px solid #bdbdbd",
+                    }
+              }
               label="Email"
               name="email"
               type="email"

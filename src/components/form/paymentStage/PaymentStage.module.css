@@ -66,31 +66,50 @@
   margin-bottom: 16px;
 }
 
-.button__tumbler {
+.tumbler,
+.tumbler__active,
+.paypal__active {
+  box-sizing: content-box;
   width: 215px;
-  height: 35px;
+  height: 40px;
+  padding: 2px 25px;
   background-color: #fff;
-  border: 1px solid transparent;
+  border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 12px;
   cursor: pointer;
 }
 
-.button__tumbler:not(:last-child) {
+.tumbler:not(:last-child),
+.tumbler__active:not(:last-child) {
   margin-right: 16px;
 }
 
-.button__tumbler:active {
-  border: 2px solid #000;
+.tumbler:active,
+.tumbler:hover {
+  border: 1px solid rgba(0, 0, 0, 0.4);
 }
 
-.button__tumbler:active .button__tumbler::before {
+.tumbler__active,
+.paypal__active {
+  border: 1px solid #000;
+}
+
+.tumbler__active::before,
+.paypal__active::before {
   content: "";
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
   border-top: 8px solid #000;
-  position: absolute;
-  bottom: -8px;
-  left: 50%;
+  position: relative;
+  bottom: -95%;
+}
+
+.tumbler__active::before {
+  left: 30%;
+}
+
+.paypal__active::before {
+  left: 12%;
 }
 
 /* todo Field Container */
@@ -142,4 +161,8 @@
 .button__confirm:hover,
 .button__confirm:active {
   background-color: #7c1010;
+}
+
+.field__container {
+  width: 50%;
 }
