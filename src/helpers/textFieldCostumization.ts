@@ -81,6 +81,14 @@ const textFieldCostumization = {
     borderBottom: "none",
     backgroundColor: "none",
   },
+  "& .MuiInputBase-root.MuiFilledInput-root.MuiFilledInput-underline.MuiInputBase-colorPrimary.MuiInputBase-formControl:hover":
+    {
+      backgroundColor: "transparent",
+    },
+  "& .MuiInputBase-root.MuiFilledInput-root.MuiFilledInput-underline.MuiInputBase-colorPrimary.MuiInputBase-formControl":
+    {
+      backgroundColor: "transparent",
+    },
 };
 
 export default textFieldCostumization;

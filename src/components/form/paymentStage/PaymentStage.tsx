@@ -91,6 +91,7 @@ const PaymentStage: React.FC<IPaymentStage> = ({ setActiveForm, email }) => {
               }
               label="Card Number"
               name="cardNumber"
+              type="number"
               variant="filled"
               value={values.cardNumber}
               onBlur={handleBlur}
@@ -199,8 +200,16 @@ const PaymentStage: React.FC<IPaymentStage> = ({ setActiveForm, email }) => {
                 <TextField
                   sx={
                     errors.securityCode && touched.securityCode
-                      ? { ...textFieldCostumization, width: "242px", border: "1px solid #e32224", }
-                      : { ...textFieldCostumization, width: "242px", border: "1px solid #bdbdbd", }
+                      ? {
+                          ...textFieldCostumization,
+                          width: "242px",
+                          border: "1px solid #e32224",
+                        }
+                      : {
+                          ...textFieldCostumization,
+                          width: "242px",
+                          border: "1px solid #bdbdbd",
+                        }
                   }
                   label="Security Code (CVV)"
                   type="password"
@@ -225,8 +234,16 @@ const PaymentStage: React.FC<IPaymentStage> = ({ setActiveForm, email }) => {
                 <TextField
                   sx={
                     errors.zip && touched.zip
-                      ? { ...textFieldCostumization, width: "242px", border: "1px solid #e32224", }
-                      : { ...textFieldCostumization, width: "242px", border: "1px solid #bdbdbd", }
+                      ? {
+                          ...textFieldCostumization,
+                          width: "242px",
+                          border: "1px solid #e32224",
+                        }
+                      : {
+                          ...textFieldCostumization,
+                          width: "242px",
+                          border: "1px solid #bdbdbd",
+                        }
                   }
                   label="Billing Zip Code"
                   type="text"

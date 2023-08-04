@@ -46,6 +46,7 @@ const EmailStage: React.FC<IEmailStage> = ({ setActiveForm, setEmail }) => {
               label="Email"
               name="email"
               type="email"
+              autoComplete="off"
               variant="filled"
               value={values.email}
               onBlur={handleBlur}
