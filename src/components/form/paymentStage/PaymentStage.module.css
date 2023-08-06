@@ -281,7 +281,7 @@
 .input {
   box-sizing: border-box;
   width: 100%;
-  height: 46px;
+  height: 40px;
   cursor: text;
 }
 
@@ -332,6 +332,6 @@
   }
 
   .input {
-    height: 100%;
+    height: 36px;
   }
 }

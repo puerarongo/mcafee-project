@@ -16,6 +16,7 @@
     "@types/react": "^18.2.18",
     "@types/react-dom": "^18.2.7",
     "formik": "^2.4.3",
+    "normalize.css": "^8.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-media": "^1.10.0",
