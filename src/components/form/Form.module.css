@@ -1,12 +1,26 @@
 .container {
-  width: 58%;
-  padding: 16px 75px 32px 90px;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 14px 15px;
 }
 
 .title {
+  display: none;
   font-size: 32px;
   font-weight: 500;
   line-height: 1.2;
   color: #4a4f5d;
   margin-bottom: 24px;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 58%;
+    padding: 16px 75px 32px 90px;
+  }
+
+  .title {
+    display: block;
+  }
 }

@@ -2,6 +2,8 @@ import React, { useState, useRef, ChangeEvent, KeyboardEvent } from "react";
 import { Formik, Field } from "formik";
 import { TextField } from "@mui/material";
 import { Checkbox, FormControlLabel } from "@mui/material";
+import ItemList from "../../itemList/ItemList";
+import svgPath from "../../../helpers/svgPath";
 import IPaymentStage from "../../../helpers/interface/paymentStage.interface";
 import paymentValidationSchema from "../../../helpers/paymentValidationSchema";
 import textFieldCostumization from "../../../helpers/textFieldCostumization";
@@ -65,11 +67,15 @@ const PaymentStage: React.FC<IPaymentStage> = ({ setActiveForm, email }) => {
         </button>
       </div>
       <hr className={styles.line} />
-      <div className={styles.title__container}>
-        <h3 className={styles.title}>2. Payment</h3>
-        <div className={styles.cards__container}>
-          <span className={styles.infonote}>Installments option available</span>
+      <div className={styles.title2__container}>
+        <div className={styles.lock__container}>
+          <h3 className={styles.title}>2. Payment</h3>
+          <img className={styles.lock} src={svgPath.lock} alt="grey lock" />
         </div>
+        <ItemList />
+      </div>
+      <div className={styles.infonote__container}>
+        <span className={styles.infonote}>Installments option available</span>
       </div>
       <div className={styles.buttons__container}>
         <button
@@ -111,25 +117,22 @@ const PaymentStage: React.FC<IPaymentStage> = ({ setActiveForm, email }) => {
             handleChange,
             handleSubmit,
           }) => (
-            <form className={styles.email__form} onSubmit={handleSubmit}>
+            <form className={styles.form} onSubmit={handleSubmit}>
               <TextField
                 className={styles.input}
                 sx={
                   errors.cardNumber && touched.cardNumber
                     ? {
                         ...textFieldCostumization,
-                        width: "555px",
                         border: "1px solid #e32224",
                       }
                     : touched.cardNumber
                     ? {
                         ...textFieldCostumization,
-                        width: "555px",
                         border: "1px solid #007bff",
                       }
                     : {
                         ...textFieldCostumization,
-                        width: "555px",
                         border: "1px solid #bdbdbd",
                       }
                 }
@@ -162,18 +165,15 @@ const PaymentStage: React.FC<IPaymentStage> = ({ setActiveForm, email }) => {
                       errors.firstName && touched.firstName
                         ? {
                             ...textFieldCostumization,
-                            width: "242px",
                             border: "1px solid #e32224",
                           }
                         : touched.firstName
                         ? {
                             ...textFieldCostumization,
-                            width: "242px",
                             border: "1px solid #007bff",
                           }
                         : {
                             ...textFieldCostumization,
-                            width: "242px",
                             border: "1px solid #bdbdbd",
                           }
                     }
@@ -203,18 +203,15 @@ const PaymentStage: React.FC<IPaymentStage> = ({ setActiveForm, email }) => {
                       errors.lastName && touched.lastName
                         ? {
                             ...textFieldCostumization,
-                            width: "242px",
                             border: "1px solid #e32224",
                           }
                         : touched.lastName
                         ? {
                             ...textFieldCostumization,
-                            width: "242px",
                             border: "1px solid #007bff",
                           }
                         : {
                             ...textFieldCostumization,
-                            width: "242px",
                             border: "1px solid #bdbdbd",
                           }
                     }
@@ -246,18 +243,15 @@ const PaymentStage: React.FC<IPaymentStage> = ({ setActiveForm, email }) => {
                       errors.date && touched.date
                         ? {
                             ...textFieldCostumization,
-                            width: "242px",
                             border: "1px solid #e32224",
                           }
                         : touched.date
                         ? {
                             ...textFieldCostumization,
-                            width: "242px",
                             border: "1px solid #007bff",
                           }
                         : {
                             ...textFieldCostumization,
-                            width: "242px",
                             border: "1px solid #bdbdbd",
                           }
                     }
@@ -285,44 +279,49 @@ const PaymentStage: React.FC<IPaymentStage> = ({ setActiveForm, email }) => {
                 </div>
 
                 <div className={styles.field__container}>
-                  <TextField
-                    className={styles.input}
-                    sx={
-                      errors.securityCode && touched.securityCode
-                        ? {
-                            ...textFieldCostumization,
-                            width: "242px",
-                            border: "1px solid #e32224",
-                          }
-                        : touched.securityCode
-                        ? {
-                            ...textFieldCostumization,
-                            width: "242px",
-                            border: "1px solid #007bff",
-                          }
-                        : {
-                            ...textFieldCostumization,
-                            width: "242px",
-                            border: "1px solid #bdbdbd",
-                          }
-                    }
-                    label="Security Code (CVV)"
-                    type="password"
-                    name="securityCode"
-                    value={values.securityCode}
-                    variant="filled"
-                    autoComplete="off"
-                    inputProps={{
-                      inputMode: "numeric",
-                      pattern: "[0-9]*",
-                      maxLength: 3,
-                      onKeyPress: handleSecurity,
-                      onInput: handleInputSecurity,
-                    }}
-                    inputRef={securityRef}
-                    onBlur={handleBlur}
-                    onChange={handleChange}
-                  />
+                  <div className={styles.security__container}>
+                    <TextField
+                      className={styles.input}
+                      sx={
+                        errors.securityCode && touched.securityCode
+                          ? {
+                              ...textFieldCostumization,
+                              border: "1px solid #e32224",
+                            }
+                          : touched.securityCode
+                          ? {
+                              ...textFieldCostumization,
+                              border: "1px solid #007bff",
+                            }
+                          : {
+                              ...textFieldCostumization,
+                              border: "1px solid #bdbdbd",
+                            }
+                      }
+                      label="Security Code (CVV)"
+                      type="password"
+                      name="securityCode"
+                      value={values.securityCode}
+                      variant="filled"
+                      autoComplete="off"
+                      inputProps={{
+                        inputMode: "numeric",
+                        pattern: "[0-9]*",
+                        maxLength: 3,
+                        onKeyPress: handleSecurity,
+                        onInput: handleInputSecurity,
+                      }}
+                      inputRef={securityRef}
+                      onBlur={handleBlur}
+                      onChange={handleChange}
+                    />
+                    <img
+                      className={styles.question__icon}
+                      src={svgPath.question}
+                      alt="question icon"
+                    />
+                  </div>
+
                   {errors.securityCode && touched.securityCode ? (
                     <p className={styles.validation__error}>
                       {errors.securityCode}
@@ -341,18 +340,15 @@ const PaymentStage: React.FC<IPaymentStage> = ({ setActiveForm, email }) => {
                       errors.zip && touched.zip
                         ? {
                             ...textFieldCostumization,
-                            width: "242px",
                             border: "1px solid #e32224",
                           }
                         : touched.zip
                         ? {
                             ...textFieldCostumization,
-                            width: "242px",
                             border: "1px solid #007bff",
                           }
                         : {
                             ...textFieldCostumization,
-                            width: "242px",
                             border: "1px solid #bdbdbd",
                           }
                     }
@@ -375,35 +371,37 @@ const PaymentStage: React.FC<IPaymentStage> = ({ setActiveForm, email }) => {
               </div>
 
               <div className={styles.checkbox__container}>
-                <Field name="toggle">
-                  {({ field }: any) => (
-                    <FormControlLabel
-                      control={
-                        <Checkbox
-                          {...field}
-                          checked={field.value}
-                          onChange={field.onChange}
-                        />
-                      }
-                      label=""
-                      sx={{
-                        "&.Mui-checked": {
-                          color: "#c01818",
-                        },
-                      }}
-                    />
-                  )}
-                </Field>
-                <p className={styles.checkbox__text}>
-                  By clicking Place Order, I accept the License Agreement,
-                  Auto-Renewal Policy and Privacy Notice.
-                </p>
+                <div
+                  className={errors.toggle ? styles.into__error : styles.into}
+                >
+                  <Field name="toggle">
+                    {({ field }: any) => (
+                      <FormControlLabel
+                        control={
+                          <Checkbox
+                            {...field}
+                            checked={field.value}
+                            onChange={field.onChange}
+                          />
+                        }
+                        label=""
+                        sx={{
+                          "&.Mui-checked": {
+                            color: "#c01818",
+                          },
+                        }}
+                      />
+                    )}
+                  </Field>
+                  <p className={styles.checkbox__text}>
+                    By clicking Place Order, I accept the License Agreement,
+                    Auto-Renewal Policy and Privacy Notice.
+                  </p>
+                </div>
+                {errors.toggle && (
+                  <p className={styles.chekbox__error}>{errors.toggle}</p>
+                )}
               </div>
-              {errors.toggle ? (
-                <p className={styles.validation__error}>{errors.toggle}</p>
-              ) : (
-                <span className={styles.default}></span>
-              )}
 
               <div className={styles.container__confirm}>
                 <p className={styles.text__confirm}>
@@ -411,6 +409,21 @@ const PaymentStage: React.FC<IPaymentStage> = ({ setActiveForm, email }) => {
                 </p>
                 <button
                   className={styles.button__confirm}
+                  type="submit"
+                  onClick={() => {
+                    touched.cardNumber = true;
+                  }}
+                >
+                  Place Order
+                </button>
+              </div>
+              <div className={styles.order__container}>
+                <div className={styles.container__price}>
+                  <h3 className={styles.total__subtitle}>Order total</h3>
+                  <p className={styles.total__price}>$54.99</p>
+                </div>
+                <button
+                  className={styles.button__order}
                   type="submit"
                   onClick={() => {
                     touched.cardNumber = true;

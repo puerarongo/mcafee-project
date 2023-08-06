@@ -1,0 +1,58 @@
+.container {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 18px 21px 18px 25px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.5;
+  background-color: #f2f2f2;
+  margin-bottom: 27px;
+}
+
+.buttons__container {
+  display: flex;
+}
+
+.subtitle {
+  margin-right: auto;
+  font-size: 12px;
+}
+
+.show__button {
+  display: flex;
+  font-size: 12px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.button__text {
+  margin-right: 3px;
+  text-decoration: underline;
+}
+
+.icon {
+  font-family: "Font Awesome";
+  font-style: normal;
+  display: inline-flex;
+  align-items: center;
+  line-height: 1;
+  font-variant: normal;
+  text-rendering: auto;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  padding: 0;
+}
+
+.main__container {
+  text-align: left;
+  padding-top: 7px;
+}
+
+.product__name {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
+  margin-bottom: 8px;
+}

@@ -1,45 +1,59 @@
 .container {
-  display: block;
-  border-radius: 16px;
-  color: #4a4f5d;
-  box-shadow: 1px 1px 16px rgba(0, 0, 0, 0.06), 4px 4px 12px rgba(0, 0, 0, 0.12);
-}
-
-.top__container {
-  display: flex;
-  padding: 24px 24px 16px;
-  border-bottom: 1px solid #cdcdcd;
-}
-
-.name__container {
-  text-align: left;
-  width: 75%;
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 1.5;
-}
-
-.quotes__container {
-  text-align: right;
-  width: 25%;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 7px 22px;
+  margin-bottom: 20px;
   font-size: 14px;
   font-weight: 400;
   line-height: 1.5;
 }
 
+.content__container {
+  box-shadow: 1px 1px 16px rgba(0, 0, 0, 0.06), 4px 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.buttons__container {
+  display: flex;
+  padding: 7px;
+}
+
+/* todo Title Container */
+.title__container {
+  display: flex;
+  padding: 21px 21px 14px;
+  margin-bottom: 37px;
+  box-shadow: 1px 1px 16px rgba(0, 0, 0, 0.06), 4px 4px 12px rgba(0, 0, 0, 0.12);
+  border: 1px solid #d1cccc;
+  border-radius: 12px;
+}
+
+.name__container {
+  text-align: left;
+  width: 75%;
+}
+
 .product__name {
   font-size: 16px;
   font-weight: 700;
-  line-height: 1.2;
-  margin-bottom: 8px;
+  line-height: 1.5;
+  margin-bottom: 7px;
+}
+
+.quotes__container {
+  box-sizing: border-box;
+  text-align: right;
+  margin-left: auto;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
 }
 
 .product__price {
   font-size: 16px;
   font-weight: 700;
   line-height: 1.2;
-  padding-bottom: 8px;
-  margin-bottom: 6px;
+  padding-bottom: 7px;
+  margin-bottom: 3px;
   border-bottom: 1px dashed #cdcdcd;
 }
 
@@ -56,7 +70,8 @@
 /* todo Article Container */
 .article__container {
   text-align: left;
-  padding: 24px 24px 8px;
+  padding: 0 21px 28px 21px;
+  margin-bottom: 49px;
   font-size: 14px;
   font-weight: 400;
   line-height: 1.2;
@@ -64,24 +79,15 @@
 
 .article__title {
   font-weight: 600;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 }
 
-.article__text {
-  margin-bottom: 8px;
-}
-
-/* todo Price Container */
 .price__container {
-  padding: 56px 24px 24px;
-}
-
-.container__into {
   display: flex;
+  padding: 0 21px 35px 21px;
   font-size: 12px;
   font-weight: 400;
   line-height: 1.5;
-  margin-bottom: 16px;
 }
 
 .subtitles__container {
@@ -95,25 +101,5 @@
 }
 
 .tax {
-  font-size: 14px;
-}
-
-.line {
-  width: 100%;
-  margin-bottom: 16px;
-  border-top: 2px dashed #cdcdcd;
-}
-
-.total__subtitle,
-.total__price {
-  font-size: 16px;
-  font-weight: 700;
-}
-
-.total__subtitle {
-  margin-right: auto;
-}
-
-.total__price {
-  margin-left: auto;
+  font-weight: 12px;
 }

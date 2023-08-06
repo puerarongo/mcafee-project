@@ -1,9 +1,12 @@
 import React from "react";
+import Media from "react-media";
 import { Formik } from "formik";
 import { TextField } from "@mui/material";
 import IEmailStage from "../../../helpers/interface/emailStage.interface";
+import svgPath from "../../../helpers/svgPath";
 import emailValidationSchema from "../../../helpers/emailValidationSchema";
 import textFieldCostumization from "../../../helpers/textFieldCostumization";
+import ItemList from "../../itemList/ItemList";
 import styles from "./EmailStage.module.css";
 
 const EmailStage: React.FC<IEmailStage> = ({ setActiveForm, setEmail }) => {
@@ -35,18 +38,15 @@ const EmailStage: React.FC<IEmailStage> = ({ setActiveForm, setEmail }) => {
                 errors.email && touched.email
                   ? {
                       ...textFieldCostumization,
-                      width: "555px",
                       border: "1px solid #e32224",
                     }
                   : touched.email
                   ? {
                       ...textFieldCostumization,
-                      width: "555px",
                       border: "1px solid #007bff",
                     }
                   : {
                       ...textFieldCostumization,
-                      width: "555px",
                       border: "1px solid #bdbdbd",
                     }
               }
@@ -66,10 +66,23 @@ const EmailStage: React.FC<IEmailStage> = ({ setActiveForm, setEmail }) => {
               <span className={styles.default}></span>
             )}
             <div className={styles.container__confirm}>
-              <p className={styles.text__confirm}>
-                We'll email your purchase receipt to this address, and provide
-                links so you can access McAfee on other devices.
-              </p>
+              <Media queries={{ small: "(max-width: 768px)" }}>
+                {(matches) => (
+                  <>
+                    {matches.small ? (
+                      <p className={styles.text__confirm}>
+                        Email address is required for order notification and
+                        receipt.
+                      </p>
+                    ) : (
+                      <p className={styles.text__confirm}>
+                        We'll email your purchase receipt to this address, and
+                        provide links so you can access McAfee on other devices.
+                      </p>
+                    )}
+                  </>
+                )}
+              </Media>
               <button
                 className={styles.button__confirm}
                 type="submit"
@@ -77,7 +90,7 @@ const EmailStage: React.FC<IEmailStage> = ({ setActiveForm, setEmail }) => {
                   touched.email = true;
                 }}
               >
-                Continue
+                <span style={{ opacity: "87%" }}>Continue</span>
               </button>
             </div>
           </form>
@@ -86,7 +99,11 @@ const EmailStage: React.FC<IEmailStage> = ({ setActiveForm, setEmail }) => {
 
       <hr className={styles.line} />
       <div className={styles.container__disable}>
-        <h3 className={styles.title}>2. Payment</h3>
+        <div className={styles.lock__container}>
+          <h3 className={styles.title}>2. Payment</h3>
+          <img className={styles.lock} src={svgPath.lock} alt="grey lock" />
+        </div>
+        <ItemList />
       </div>
       <hr className={styles.line} />
     </div>

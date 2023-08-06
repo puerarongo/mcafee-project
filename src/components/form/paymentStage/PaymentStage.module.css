@@ -1,7 +1,16 @@
-.title__container {
+.title__container,
+.title2__container {
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
+}
+
+.title__container {
+  margin-bottom: 7px;
+  padding: 0 7px;
+}
+
+.title2__container {
+  padding: 0 21px 0 7px;
 }
 
 .title__email {
@@ -9,6 +18,7 @@
 }
 
 .email {
+  font-size: 14px;
   margin-right: auto;
 }
 
@@ -25,8 +35,26 @@
   margin-left: auto;
 }
 
+.lock__container {
+  display: flex;
+  align-items: baseline;
+  margin-right: auto;
+}
+
+.lock {
+  width: 14px;
+  height: 20px;
+  margin-left: 8px;
+}
+
+.infonote__container {
+  display: flex;
+  justify-content: center;
+  width: 245px;
+  margin: 0 7px 14px auto;
+}
+
 .infonote {
-  text-align: center;
   font-size: 12px;
   line-height: 1.2;
   color: #38393c;
@@ -38,6 +66,7 @@
 }
 
 .line {
+  display: none;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   margin-bottom: 16px;
 }
@@ -48,7 +77,12 @@
   margin-bottom: 14px;
 }
 
-.validation__error {
+.chekbox__error {
+  margin-top: 3px;
+}
+
+.validation__error,
+.chekbox__error {
   font-size: 12px;
   font-weight: 400;
   color: #e32224;
@@ -64,6 +98,7 @@
 /* todo Buttons */
 .buttons__container {
   display: flex;
+  padding: 0 21px 0 7px;
   margin-bottom: 16px;
 }
 
@@ -71,11 +106,11 @@
 .tumbler__active,
 .paypal__active {
   box-sizing: content-box;
-  width: 215px;
-  height: 40px;
+  width: calc(50% - 7px);
+  height: 28px;
   padding: 2px 25px;
   background-color: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 2px solid rgba(0, 0, 0, 0.1);
   border-radius: 12px;
   cursor: pointer;
 }
@@ -87,12 +122,12 @@
 
 .tumbler:active,
 .tumbler:hover {
-  border: 1px solid rgba(0, 0, 0, 0.4);
+  border: 2px solid rgba(0, 0, 0, 0.4);
 }
 
 .tumbler__active,
 .paypal__active {
-  border: 1px solid #000;
+  border: 2px solid #000;
 }
 
 .tumbler__active::before,
@@ -102,7 +137,7 @@
   border-right: 5px solid transparent;
   border-top: 8px solid #000;
   position: relative;
-  bottom: -95%;
+  bottom: -120%;
 }
 
 .tumbler__active::before {
@@ -114,27 +149,57 @@
 }
 
 /* todo Field Container */
+.form {
+  padding: 0 21px 0 7px;
+}
+
 .name__container,
 .code__container {
   display: flex;
 }
 
-.checkbox__container {
+.field__container:nth-child(2n + 1) {
+  margin-right: 14px;
+}
+
+.security__container {
   display: flex;
+  align-items: center;
+}
+
+.question__icon {
+  width: 18px;
+  height: 18px;
+  margin: 0 28px 0 21px;
+  cursor: pointer;
+}
+
+.checkbox__container {
+  box-sizing: border-box;
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding: 16px 24px 16px 29px;
-  margin-bottom: 32px;
+  padding: 7px;
+  margin-bottom: 28px;
   background-color: #f6f7f9;
 }
 
-.checkbox {
-  margin-right: 20px;
+.into,
+.into__error {
+  display: flex;
+  padding: 8px 16px 8px 21px;
+}
+
+.into {
+  border: 1px solid #f6f7f9;
+}
+
+.into__error {
+  border: 1px solid #e32224;
 }
 
 .checkbox__text {
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 400;
   line-height: 1.3;
 }
@@ -142,13 +207,20 @@
 /* todo Button Confirm */
 .container__confirm {
   display: flex;
+  margin-bottom: 126px;
 }
 
-.button__confirm {
+.text__confirm {
+  font-size: 12px;
+}
+
+.button__confirm,
+.button__order {
+  display: none;
   box-sizing: content-box;
   width: 156px;
   margin: 8px 0 8px auto;
-  padding: 8.8px 25px;
+  padding: 9px 22px;
   text-transform: uppercase;
   font-size: 14px;
   font-weight: 500;
@@ -160,14 +232,106 @@
 }
 
 .button__confirm:hover,
-.button__confirm:active {
+.button__confirm:active,
+.button__order:hover,
+.button__order:active {
   background-color: #7c1010;
+}
+
+.button__order {
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 100%;
 }
 
 .field__container {
   width: 50%;
 }
 
+/* * Order Fixed */
+.order__container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 14px 21px;
+  background-color: #fff;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.15);
+}
+
+.container__price {
+  display: flex;
+  margin: 0 30px 7px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.total__subtitle {
+  margin-right: auto;
+}
+
+.total__price {
+  margin-left: auto;
+}
+
+/* * Material UI */
 .input {
+  box-sizing: border-box;
+  width: 100%;
+  height: 46px;
   cursor: text;
+}
+
+@media screen and (min-width: 768px) {
+  .title__container {
+    margin-bottom: 20px;
+  }
+
+  .line {
+    display: block;
+  }
+
+  .tumbler,
+  .tumbler__active,
+  .paypal__active {
+    width: 215px;
+    height: 33px;
+    padding: 2px 22px;
+  }
+
+  .tumbler__active::before,
+  .paypal__active::before {
+    bottom: -95%;
+  }
+
+  .question__icon {
+    margin: 0 28px 0 24px;
+  }
+
+  .checkbox__container {
+    margin-bottom: 32px;
+  }
+
+  .checkbox__text {
+    font-size: 14px;
+  }
+
+  .container__confirm {
+    margin-bottom: 126px;
+  }
+
+  .button__confirm {
+    display: block;
+  }
+
+  .order__container {
+    display: none;
+  }
+
+  .input {
+    height: 100%;
+  }
 }

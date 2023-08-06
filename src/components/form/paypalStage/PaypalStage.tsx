@@ -44,35 +44,57 @@ const PaypalStage: React.FC = () => {
         }) => (
           <form className={styles.email__form} onSubmit={handleSubmit}>
             <div className={styles.checkbox__container}>
-              <Field name="toggle">
-                {({ field }: any) => (
-                  <FormControlLabel
-                    control={
-                      <Checkbox
-                        {...field}
-                        checked={field.value}
-                        onChange={field.onChange}
-                      />
-                    }
-                    label=""
-                    sx={{
-                      "&.Mui-checked": {
+              <div className={errors.toggle ? styles.into__error : styles.into}>
+                <Field name="toggle">
+                  {({ field }: any) => (
+                    <FormControlLabel
+                      control={
+                        <Checkbox
+                          {...field}
+                          checked={field.value}
+                          onChange={field.onChange}
+                        />
+                      }
+                      label=""
+                      sx={{
                         color: "#c01818",
-                      },
-                    }}
-                  />
-                )}
-              </Field>
-              <p className={styles.checkbox__text}>
-                By clicking Place Order, I accept the License Agreement,
-                Auto-Renewal Policy and Privacy Notice.
+                        "&.Mui-checked": {
+                          color: "#c01818",
+                        },
+                      }}
+                    />
+                  )}
+                </Field>
+                <p className={styles.checkbox__text}>
+                  By clicking Place Order, I accept the License Agreement,
+                  Auto-Renewal Policy and Privacy Notice.
+                </p>
+              </div>
+              {errors.toggle && (
+                <p className={styles.chekbox__error}>{errors.toggle}</p>
+              )}
+            </div>
+            <div className={styles.container__confirm}>
+              <p className={styles.text__confirm}>
+                This payment will be processed in the United States
               </p>
             </div>
-            {errors.toggle ? (
-              <p className={styles.validation__error}>{errors.toggle}</p>
-            ) : (
-              <span className={styles.default}></span>
-            )}
+
+            <div className={styles.order__container}>
+              <div className={styles.container__price}>
+                <h3 className={styles.total__subtitle}>Order total</h3>
+                <p className={styles.total__price}>$54.99</p>
+              </div>
+              <button
+                className={styles.button__paypal}
+                type="submit"
+                onClick={() => {
+                  touched.cardNumber = true;
+                }}
+              >
+                Place Order
+              </button>
+            </div>
           </form>
         )}
       </Formik>

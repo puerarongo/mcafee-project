@@ -1,6 +1,4 @@
 const textFieldCostumization = {
-  width: "555px",
-  height: "22px",
   padding: "6px 12px 6px 16px",
   "& .MuiInputBase-root": {
     backgroundColor: "#fff",

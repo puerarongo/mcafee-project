@@ -1,6 +1,8 @@
 .header {
   display: block;
-  padding: 10px 20px;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px 0;
   margin-bottom: 20px;
 }
 
@@ -16,5 +18,15 @@
 .svg__logo {
   width: 124px;
   height: 22px;
-  margin: 0 auto 0 143px;
+  margin: 0 auto 0 26px;
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    padding: 10px 20px;
+  }
+
+  .svg__logo {
+    margin: 0 auto 0 143px;
+  }
 }
