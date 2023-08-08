@@ -13,9 +13,7 @@ const IconsList: React.FC = () => {
         ) => {
           return (
             <li className={styles.icons__item} key={index + 1}>
-              <svg className={styles.svg__icon}>
-                <use href={icon + id}></use>
-              </svg>
+              <img src={icon + id} alt={id} />
               <div className={styles.text__container}>
                 <p className={styles.icon__text}>{description1}</p>
                 <p className={styles.icon__text}>{description2}</p>

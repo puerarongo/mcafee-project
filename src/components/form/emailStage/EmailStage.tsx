@@ -83,15 +83,17 @@ const EmailStage: React.FC<IEmailStage> = ({ setActiveForm, setEmail }) => {
                   </>
                 )}
               </Media>
-              <button
-                className={styles.button__confirm}
-                type="submit"
-                onClick={() => {
-                  touched.email = true;
-                }}
-              >
-                <span style={{ opacity: "87%" }}>Continue</span>
-              </button>
+              <div>
+                <button
+                  className={styles.button__confirm}
+                  type="submit"
+                  onClick={() => {
+                    touched.email = true;
+                  }}
+                >
+                  <span style={{ opacity: "87%" }}>Continue</span>
+                </button>
+              </div>
             </div>
           </form>
         )}

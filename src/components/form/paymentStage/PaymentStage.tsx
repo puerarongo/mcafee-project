@@ -95,7 +95,11 @@ const PaymentStage: React.FC<IPaymentStage> = ({ setActiveForm, email }) => {
           type="button"
           onClick={paypalHandler}
         >
-          PayPal
+          <img
+            className={styles.paypal__img}
+            src={svgPath.payPal}
+            alt="PayPal logo"
+          />
         </button>
       </div>
       {isActive ? (

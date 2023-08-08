@@ -141,11 +141,12 @@
 }
 
 .tumbler__active::before {
-  left: 30%;
+  left: 25%;
 }
 
 .paypal__active::before {
-  left: 12%;
+  left: 16%;
+  bottom: -105%;
 }
 
 /* todo Field Container */
@@ -226,7 +227,7 @@
   font-weight: 500;
   color: #fff;
   background-color: #ff1c1c;
-  border: none;
+  border: 1px solid #c01818;
   border-radius: 50px;
   cursor: pointer;
 }
@@ -251,6 +252,7 @@
 
 /* * Order Fixed */
 .order__container {
+  z-index: 10;
   position: fixed;
   bottom: 0;
   left: 0;
@@ -275,6 +277,12 @@
 
 .total__price {
   margin-left: auto;
+}
+
+.paypal__img {
+  text-align: center;
+  width: 78px;
+  height: 22px;
 }
 
 /* * Material UI */
@@ -310,9 +318,18 @@
     padding: 2px 22px;
   }
 
-  .tumbler__active::before,
-  .paypal__active::before {
+  .tumbler__active::before {
     bottom: -105%;
+  }
+
+  .paypal__active::before {
+    bottom: -90%;
+  }
+
+  .paypal__img {
+    text-align: center;
+    width: 90px;
+    height: 24px;
   }
 
   .question__icon {
