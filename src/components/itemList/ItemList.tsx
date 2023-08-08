@@ -2,6 +2,7 @@ import React from "react";
 import ICardItem from "../../helpers/interface/cardItem.interface";
 import cardsPath from "../../helpers/cardsPath";
 import styles from "./ItemList.module.css";
+import svgPath from "../../helpers/svgPath";
 
 const ItemList: React.FC = () => {
   return (

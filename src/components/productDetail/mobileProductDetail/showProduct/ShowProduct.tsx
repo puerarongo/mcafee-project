@@ -1,5 +1,6 @@
 import React from "react";
 import IShowProduct from "../../../../helpers/interface/showProduct.interface";
+import svgPath from "../../../../helpers/svgPath";
 import styles from "./ShowProduct.module.css";
 
 const ShowProduct: React.FC<IShowProduct> = ({ setShow }) => {
@@ -15,7 +16,11 @@ const ShowProduct: React.FC<IShowProduct> = ({ setShow }) => {
           onClick={clickHandler}
         >
           <p className={styles.button__text}>Show</p>
-          <i className={styles.icon}></i>
+          <div className={styles.svg__container}>
+            <svg className={styles.svg__arrow}>
+              <use href={svgPath.smallArrow + "#arrow"}></use>
+            </svg>
+          </div>
         </button>
       </div>
       <div className={styles.main__container}>

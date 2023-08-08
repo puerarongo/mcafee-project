@@ -85,6 +85,13 @@
   margin-left: 8px;
 }
 
+.arrow {
+  height: 20px;
+  width: 20px;
+  margin-right: 14px;
+  margin-left: 30px;
+}
+
 /* * Material UI */
 .input {
   box-sizing: border-box;

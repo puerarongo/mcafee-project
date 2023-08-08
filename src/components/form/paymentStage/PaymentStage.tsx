@@ -1,4 +1,8 @@
 import React, { useState, useRef, ChangeEvent, KeyboardEvent } from "react";
+import Select from "@mui/material/Select";
+import InputLabel from "@mui/material/InputLabel";
+import MenuItem from "@mui/material/MenuItem";
+import FormControl from "@mui/material/FormControl";
 import { Formik, Field } from "formik";
 import { TextField } from "@mui/material";
 import { Checkbox, FormControlLabel } from "@mui/material";
@@ -7,6 +11,7 @@ import svgPath from "../../../helpers/svgPath";
 import IPaymentStage from "../../../helpers/interface/paymentStage.interface";
 import paymentValidationSchema from "../../../helpers/paymentValidationSchema";
 import textFieldCostumization from "../../../helpers/textFieldCostumization";
+import selectFieldCostumization from "../../../helpers/selectFieldCostumization";
 import PaypalStage from "../paypalStage/PaypalStage";
 import styles from "./PaymentStage.module.css";
 
@@ -66,7 +71,7 @@ const PaymentStage: React.FC<IPaymentStage> = ({ setActiveForm, email }) => {
           Edit
         </button>
       </div>
-      <hr className={styles.line} />
+      <div className={styles.line}></div>
       <div className={styles.title2__container}>
         <div className={styles.lock__container}>
           <h3 className={styles.title}>2. Payment</h3>
@@ -103,6 +108,7 @@ const PaymentStage: React.FC<IPaymentStage> = ({ setActiveForm, email }) => {
             securityCode: "",
             zip: "",
             toggle: false,
+            state: "",
           }}
           validationSchema={paymentValidationSchema}
           onSubmit={(values) => {
@@ -364,6 +370,50 @@ const PaymentStage: React.FC<IPaymentStage> = ({ setActiveForm, email }) => {
                   />
                   {errors.zip && touched.zip ? (
                     <p className={styles.validation__error}>{errors.zip}</p>
+                  ) : (
+                    <span className={styles.default}></span>
+                  )}
+                </div>
+
+                <div className={styles.field__container}>
+                  <FormControl
+                    variant="filled"
+                    sx={
+                      errors.state && touched.state
+                        ? {
+                            ...selectFieldCostumization,
+                            border: "1px solid #e32224",
+                          }
+                        : touched.state
+                        ? {
+                            ...selectFieldCostumization,
+                            border: "1px solid #007bff",
+                          }
+                        : {
+                            ...selectFieldCostumization,
+                            border: "1px solid #bdbdbd",
+                          }
+                    }
+                    className={styles.select}
+                  >
+                    <InputLabel id="demo-simple-select-filled-label">
+                      State
+                    </InputLabel>
+                    <Select
+                      name="state"
+                      labelId="demo-simple-select-filled-label"
+                      id="demo-simple-select-filled"
+                      value={values.state}
+                      onChange={handleChange}
+                    >
+                      <MenuItem value="">State</MenuItem>
+                      <MenuItem value={"Arizona"}>Arizona</MenuItem>
+                      <MenuItem value={"Alaska"}>Alaska</MenuItem>
+                      <MenuItem value={"Arkansas"}>Arkansas</MenuItem>
+                    </Select>
+                  </FormControl>
+                  {errors.state && touched.state ? (
+                    <p className={styles.validation__error}>{errors.state}</p>
                   ) : (
                     <span className={styles.default}></span>
                   )}

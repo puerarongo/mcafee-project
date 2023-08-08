@@ -285,6 +285,14 @@
   cursor: text;
 }
 
+.select {
+  box-sizing: border-box;
+  width: 100%;
+  height: 40px;
+  cursor: text;
+  border: 1px solid #bdbdbd;
+}
+
 @media screen and (min-width: 768px) {
   .title__container {
     margin-bottom: 20px;
@@ -304,7 +312,7 @@
 
   .tumbler__active::before,
   .paypal__active::before {
-    bottom: -95%;
+    bottom: -105%;
   }
 
   .question__icon {
@@ -331,7 +339,8 @@
     display: none;
   }
 
-  .input {
+  .input,
+  .select {
     height: 36px;
   }
 }

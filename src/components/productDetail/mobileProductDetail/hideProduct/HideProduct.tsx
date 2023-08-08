@@ -1,6 +1,7 @@
 import React from "react";
 import IShowProduct from "../../../../helpers/interface/showProduct.interface";
 import buttonsStyles from "../showProduct/ShowProduct.module.css";
+import svgPath from "../../../../helpers/svgPath";
 import styles from "./HideProduct.module.css";
 
 const HideProduct: React.FC<IShowProduct> = ({ setShow }) => {
@@ -18,7 +19,11 @@ const HideProduct: React.FC<IShowProduct> = ({ setShow }) => {
             onClick={clickHandler}
           >
             <p className={buttonsStyles.button__text}>Hide</p>
-            <i className={buttonsStyles.icon}></i>
+            <div className={styles.svg__container}>
+              <svg className={styles.svg__arrow}>
+                <use href={svgPath.smallArrow + "#arrow"}></use>
+              </svg>
+            </div>
           </button>
         </div>
         <div className={styles.title__container}>

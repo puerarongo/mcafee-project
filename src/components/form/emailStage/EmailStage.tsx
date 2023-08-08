@@ -97,15 +97,20 @@ const EmailStage: React.FC<IEmailStage> = ({ setActiveForm, setEmail }) => {
         )}
       </Formik>
 
-      <hr className={styles.line} />
+      <div className={styles.line}></div>
       <div className={styles.container__disable}>
         <div className={styles.lock__container}>
           <h3 className={styles.title}>2. Payment</h3>
           <img className={styles.lock} src={svgPath.lock} alt="grey lock" />
         </div>
         <ItemList />
+        <div>
+          <svg className={styles.arrow}>
+            <use href={svgPath.arrow + "#arrow"}></use>
+          </svg>
+        </div>
       </div>
-      <hr className={styles.line} />
+      <div className={styles.line}></div>
     </div>
   );
 };

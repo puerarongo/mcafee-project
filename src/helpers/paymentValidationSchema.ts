@@ -31,6 +31,10 @@ const paymentValidationSchema = yup.object().shape({
       [true],
       "You'll need to check the box to accept offer terms and place your order."
     ),
+  state: yup
+    .string()
+    .required("Please enter your state.")
+    .oneOf(["Arizona", "Alaska", "Arkansas"], "Please enter your state."),
 });
 
 export default paymentValidationSchema;

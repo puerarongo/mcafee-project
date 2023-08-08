@@ -17,6 +17,11 @@
   padding: 7px;
 }
 
+.svg__arrow {
+  height: 8px;
+  width: 8px;
+}
+
 /* todo Title Container */
 .title__container {
   display: flex;
