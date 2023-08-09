@@ -2,6 +2,7 @@ import React from "react";
 import IShowProduct from "../../../../helpers/interface/showProduct.interface";
 import buttonsStyles from "../showProduct/ShowProduct.module.css";
 import svgPath from "../../../../helpers/svgPath";
+import IconsList from "../../../iconsList/IconsList";
 import styles from "./HideProduct.module.css";
 
 const HideProduct: React.FC<IShowProduct> = ({ setShow }) => {
@@ -61,6 +62,10 @@ const HideProduct: React.FC<IShowProduct> = ({ setShow }) => {
             <p>${price}</p>
             <p className={styles.tax}>Not yet included</p>
           </div>
+        </div>
+
+        <div style={{ paddingBottom: "20px" }}>
+          <IconsList />
         </div>
       </div>
     </div>

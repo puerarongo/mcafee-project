@@ -4,6 +4,7 @@
   color: #4a4f5d;
   box-shadow: 1px 1px 16px rgba(0, 0, 0, 0.06), 4px 4px 12px rgba(0, 0, 0, 0.12);
   margin-bottom: 60px;
+  max-width: 432px;
 }
 
 .top__container {

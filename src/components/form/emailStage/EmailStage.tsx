@@ -75,7 +75,10 @@ const EmailStage: React.FC<IEmailStage> = ({ setActiveForm, setEmail }) => {
                         receipt.
                       </p>
                     ) : (
-                      <p className={styles.text__confirm}>
+                      <p
+                        className={styles.text__confirm}
+                        style={{ width: "58.3%" }}
+                      >
                         We'll email your purchase receipt to this address, and
                         provide links so you can access McAfee on other devices.
                       </p>
@@ -83,7 +86,7 @@ const EmailStage: React.FC<IEmailStage> = ({ setActiveForm, setEmail }) => {
                   </>
                 )}
               </Media>
-              <div>
+              <div className={styles.button__container}>
                 <button
                   className={styles.button__confirm}
                   type="submit"

@@ -3,6 +3,7 @@
   box-sizing: border-box;
   width: 100%;
   padding: 14px 15px;
+  margin-left: auto;
 }
 
 .title {
@@ -16,7 +17,9 @@
 
 @media screen and (min-width: 768px) {
   .container {
+    box-sizing: content-box;
     width: 58%;
+    max-width: 583px;
     padding: 16px 75px 32px 90px;
   }
 
