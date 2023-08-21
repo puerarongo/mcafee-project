@@ -2,9 +2,9 @@ import * as yup from "yup";
 
 const paymentValidationSchema = yup.object().shape({
   cardNumber: yup
-    .number()
+    .string()
     .min(16, "This card is not valid. Double-check and try again.")
-    .max(18, "This card is not valid. Double-check and try again.")
+    .max(16, "This card is not valid. Double-check and try again.")
     .required("Please enter the credit card number."),
   firstName: yup.string().required("We need your First name."),
   lastName: yup.string().required("We need your First name."),

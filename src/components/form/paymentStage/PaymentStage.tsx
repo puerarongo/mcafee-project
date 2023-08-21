@@ -116,7 +116,7 @@ const PaymentStage: React.FC<IPaymentStage> = ({ setActiveForm, email }) => {
           }}
           validationSchema={paymentValidationSchema}
           onSubmit={(values) => {
-            console.log("Form values", values);
+            console.log("Form values", { ...values, email });
           }}
         >
           {({
@@ -271,8 +271,7 @@ const PaymentStage: React.FC<IPaymentStage> = ({ setActiveForm, email }) => {
                     variant="filled"
                     autoComplete="off"
                     inputProps={{
-                      inputMode: "numeric",
-                      pattern: "[0-9]*",
+                      pattern: "[0-9/]*",
                       maxLength: 5,
                       onKeyPress: handleDate,
                       onInput: handleInputDate,
